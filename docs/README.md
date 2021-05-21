@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /img/logo.jpg
-actionText: NEW JOURNEY ---123测试111 →
+actionText: NEW JOURNEY →
 actionLink: /zh/guide/
 features:
 # - title: 简洁至上
