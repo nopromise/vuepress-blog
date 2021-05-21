@@ -32,6 +32,12 @@ module.exports = [
                     { text: 'Nginx进阶', link: '/container/k8s/k8s-high' }
                 ]
             },
+            {
+                text: 'Jenkins', items: [
+                    { text: 'Jenkins安装', link: '/container/jenkins/jenkins-inst' },
+                    { text: 'Jenkins的应用', link: '/container/jenkins/jenkins-apply' }
+                ]
+            }
 
         ]
     },
