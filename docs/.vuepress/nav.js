@@ -16,7 +16,6 @@ module.exports = [
             {
                 text: 'Docker', items: [
                     { text: 'Docker基础', link: '/container/docker/docker-basic' },
-                    { text: 'Docker进阶', link: '/container/docker/docker-high' },
                     { text: 'Docker应用', link: '/container/docker/docker-apply' }
                 ]
             },

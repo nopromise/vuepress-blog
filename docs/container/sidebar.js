@@ -4,8 +4,8 @@ module.exports = [
 		collapsable: false,
 		children: [
 			'/container/docker/docker-basic',
-			'/container/docker/docker-high',
-			'/container/docker/docker-apply'
+			'/container/docker/docker-apply',
+			'/container/docker/docker-apply-jenkins'
 		]
 	},
 	{

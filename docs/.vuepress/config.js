@@ -8,6 +8,13 @@ module.exports = {
         ['link', { rel: 'icon', href: '/img/5.ico' }],
         ["link", { rel: "stylesheet", href: "/css/style.css" }],
         ["script", { charset: "utf-8", src: "/js/main.js" }],//新加入
+
+        ["meta", {name: "robots", content: "all"}],
+        ["meta", {name: "author", content: "nopr"}],
+        ["meta", {name: "keywords", content: "NOPR,Java 全栈知识体系, java体系, java知识体系, java框架,java详解,java学习路线,java spring, java面试, 知识体系, java技术体系, java编程, java编程指南,java开发体系, java开发,java教程,java,java数据结构, 算法, 开发基础"}],
+        ["meta", {name: "apple-mobile-web-app-capable", content: "yes"}]
+
+
     ],
     markdown: {
         lineNumbers: true,

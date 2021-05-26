@@ -16,6 +16,6 @@ features:
 - title: SHARE
   details: 分享生活中的点滴。 
 
-footer: MIT Licensed | Copyright © 2021-present NOPR
+footer: MIT Licensed | Copyright © 2021 NOPR | ICP证：鲁ICP备2021018280号
 ---
 
