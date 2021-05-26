@@ -79,8 +79,12 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 3.部署命令
 ```
 docker run  -d -p 80:80 -p 443:443 --name nginx   -v /data/nginx/html:/usr/share/nginx/html   -v /data/nginx/conf/conf.d:/etc/nginx/conf.d -v /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf  -v /data/nginx/logs:/var/log/nginx   nginx
-```
 
+
+添加（时间映射）：
+-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime
+
+```
 
 
 命令说明：
