@@ -78,7 +78,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ```
 3.部署命令
 ```
-docker run  -d -p 8080:80 --name nginx-vueblog   -v /data/nginx/html:/usr/share/nginx/html   -v /data/nginx/conf/default.conf:/etc/nginx/conf.d/default.conf   -v /data/nginx/logs:/var/log/nginx   nginx
+docker run  -d -p 80:80 -p 443:443 --name nginx   -v /data/nginx/html:/usr/share/nginx/html   -v /data/nginx/conf/conf.d:/etc/nginx/conf.d -v /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf  -v /data/nginx/logs:/var/log/nginx   nginx
 ```
 
 
@@ -106,17 +106,6 @@ docker run  -d -p 8080:80 --name nginx-vueblog   -v /data/nginx/html:/usr/share/
 [root@localhost www]# vim index.html 
 ```
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Nginx test !!!</title>
-</head>
-<body>
-    <h1>我的第一个标题</h1>
-    <p>我的第一个段落。</p>
-</body>
-</html>
 
 
 ### 部署vuepress的静态博客到nginx
@@ -152,3 +141,75 @@ location / {
 
 其他方式:
 https://www.cnblogs.com/sueyyyy/p/13206798.html
+
+
+### Nginx配置443端口80端口和SSL证书
+
+#### 1.阿里云配置SSL证书
+
+阿里云申请免费SSL证书，在证书申请中绑定域名(blog.nopr.tech),绑定成功后，下载对应nginx证书，解压后获得xx.key和xx.pem证书文件。
+
+#### 2.Nginx中配置SSL证书和433端口
+1. 在cenos7中目录/data/nginx/conf/conf.d下新建cert文件夹
+2. 上传2个证书到cert下
+3. 配置/data/nginx/conf/conf.d下的default.conf,然后重启nginx
+
+```
+#以下属性中，以ssl开头的属性表示与证书配置有关。
+server {
+    listen 443 ssl;
+    #配置HTTPS的默认访问端口为443。
+    #如果未在此处配置HTTPS的默认访问端口，可能会造成Nginx无法启动。
+    #如果您使用Nginx 1.15.0及以上版本，请使用listen 443 ssl代替listen 443和ssl on。
+    server_name blog.nopr.tech; #需要将yourdomain.com替换成证书绑定的域名。
+    root html;
+    index index.html index.htm;
+    #默认根路径为/etc/nginx/
+    ssl_certificate  conf.d/cert/xxx.pem;  #需要将cert-file-name.pem替换成已上传的证书文件的名称。
+    #默认根路径为/etc/nginx/
+    ssl_certificate_key conf.d/cert/xxx.key; #需要将cert-file-name.key替换成已上传的证书密钥文件的名称。
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    #表示使用的加密套件的类型。
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2; #表示使用的TLS协议的类型。
+    ssl_prefer_server_ciphers on;
+    location / {
+        root   /usr/share/nginx/html/dist;
+       # root html;  #站点目录。
+        index index.html index.htm;
+    }
+}
+
+```
+
+#### 3.配置80端口
+
+```
+server{
+
+    listen       80;
+    listen  [::]:80;
+    server_name  blog.nopr.tech;
+    #nginx 80端口重定向到443端口，也就是http访问自动跳转到https
+    rewrite ^(.*)$ https://${server_name}$1 permanent;
+
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        #root   /usr/share/nginx/html;
+        root   /usr/share/nginx/html/dist;
+        index  index.html index.htm;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+}
+
+```
+
+
+

@@ -21,21 +21,13 @@ module.exports = [
                 ]
             },
             {
-                text: 'K8S', items: [
-                    { text: 'K8S基础知识', link: '/container/k8s/k8s-basic' },
-                    { text: 'K8S基础知识2', link: '/container/k8s/k8s-high' }
-                ]
-            },
-            {
-                text: 'Nginx', items: [
-                    { text: 'Nginx基础', link: '/container/k8s/k8s-basic' },
-                    { text: 'Nginx进阶', link: '/container/k8s/k8s-high' }
-                ]
-            },
-            {
                 text: 'Jenkins', items: [
                     { text: 'Jenkins安装', link: '/container/jenkins/jenkins-inst' },
                     { text: 'Jenkins的应用', link: '/container/jenkins/jenkins-apply' }
+                ]
+            }, {
+                text: 'Nginx', items: [
+                    { text: 'Nginx基础', link: '/container/nginx/nginx-basic' },
                 ]
             }
 

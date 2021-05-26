@@ -9,19 +9,18 @@ module.exports = [
 		]
 	},
 	{
-		title: 'K8S详解',
-		collapsable: false,
-		children: [
-			'/container/k8s/k8s-basic',
-			'/container/k8s/k8s-high',
-		]
-	},
-	{
 		title: 'Jenkins详解',
 		collapsable: false,
 		children: [
 			'/container/jenkins/jenkins-inst',
 			'/container/jenkins/jenkins-apply',
+		]
+	},
+	{
+		title: 'Nginx服务器',
+		collapsable: false,
+		children: [
+			'/container/nginx/nginx-basic',
 		]
 	}
 
