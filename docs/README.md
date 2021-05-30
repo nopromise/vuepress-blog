@@ -1,7 +1,12 @@
 ---
 home: true
-heroImage: /img/logo.jpg
-actionText: NEW JOURNEY →
+heroImage: /img/alita.jpg
+
+# bgImage: '/img/bg2.png'
+# bgImageStyle: { height: '700px' }
+# faceImage: '/img/alita.jpg'
+# actionText: NEW JOURNEY →
+# actionText:
 actionLink: /zh/guide/
 features:
 # - title: 简洁至上

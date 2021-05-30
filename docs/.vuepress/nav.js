@@ -1,13 +1,10 @@
 module.exports = [
 
     {
-        text: '懵逼指南', link: '/guide/'
-    },
-    {
-        text: '面试宝典',
+        text: '前端',
         items: [
-            { text: '初级开发篇', link: '/baodian/zero/' },
-            { text: '中高进阶篇', link: '/baodian/high/' },
+            { text: 'Js&Jquery', link: '/baodian/zero/' },
+            { text: 'H5', link: '/baodian/high/' },
         ]
     },
     {
@@ -22,7 +19,7 @@ module.exports = [
             {
                 text: 'Jenkins', items: [
                     { text: 'Jenkins安装', link: '/container/jenkins/jenkins-inst' },
-                    { text: 'Jenkins的应用', link: '/container/jenkins/jenkins-apply' }
+                    { text: 'Jenkins的应用', link: '/container/jenkins/jenkins-apply-springboot' }
                 ]
             }, {
                 text: 'Nginx', items: [
@@ -50,13 +47,15 @@ module.exports = [
                     // { text: '腾讯云', link: 'https://cloud.tencent.com/' }
                 ]
             }
-            // {
-            //     text: '博客指南',
-            //     items: [
-            //         { text: '掘金', link: 'https://juejin.im/' },
-            //         { text: 'CSDN', link: 'https://blog.csdn.net/' }
-            //     ]
-            // }
+         
         ]
-    }
+    },
+
+    {
+        text: '生活点滴',
+        items: [
+            { text: '生活', link: '/life/life/one' },
+            { text: '旅游', link: '/life/travel/xiamen' },
+        ]
+    },
 ]

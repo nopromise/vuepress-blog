@@ -1,6 +1,7 @@
 module.exports = {
     title: 'NOPR BLOG',
     description: 'RECORD AND SHARE',
+
     //build后生成的目录   ./ 是package.json所在的当前目录；默认在.vuepress目录下 
     // dest: './dist',
     port: '7777',
@@ -24,6 +25,7 @@ module.exports = {
     // theme: 'reco',//主题
 
     themeConfig: {
+        // type: 'blog',
         // 博客配置
         // blogConfig: {
         //     category: {
@@ -70,6 +72,13 @@ module.exports = {
         ['vuepress-plugin-code-copy', true],
         //右侧锚点导航栏
         ['vuepress-plugin-right-anchor'],
+        // ['@vuepress/medium-zoom', {
+        //     selector: 'img',
+        //     // See: https://github.com/francoischalifour/medium-zoom#options
+        //     options: {
+        //       margin: 16
+        //     }
+        // }],
         // ["vuepress-plugin-toolbar", {
         //     "opts": [
         //         {

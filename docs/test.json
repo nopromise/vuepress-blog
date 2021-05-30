@@ -1,0 +1,67 @@
+// var examJsonP3 = JSON.parse('');
+[
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "1",
+        "que006": "../../exam/video/1.mp4",
+        "que010": "题目1：xxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "2",
+        "que006": "../../exam/video/2.mp4",
+        "que010": "题目2：xxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "3",
+        "que006": "../../exam/video/3.mp4",
+        "que010": "题目3：xxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "4",
+        "que006": "../../exam/video/4.mp4",
+        "que010": "题目4：xxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "5",
+        "que006": "../../exam/video/5.mp4",
+        "que010": "题目5：xxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "6",
+        "que006": "../../exam/video/6.mp4",
+        "que010": "题目6：xxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "7",
+        "que006": "../../exam/video/7.mp4",
+        "que010": "题目7：xxxxxxxxxxxxxxxxxxx"
+    },
+    {
+        "que001": "3",
+        "que002": "1",
+        "que003": "案例分析",
+        "que005": "8",
+        "que006": "../../exam/video/8.mp4",
+        "que010": "题目8：xxxxxxxxxxxxxxxxxxx"
+    }
+]

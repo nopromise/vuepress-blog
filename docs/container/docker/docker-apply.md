@@ -86,6 +86,9 @@ docker run  -d -p 80:80 -p 443:443 --name nginx   -v /data/nginx/html:/usr/share
 
 ```
 
+```
+docker run  -d -p 80:80 -p 443:443 --name nginx  -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime  -v /data/nginx/html:/usr/share/nginx/html   -v /data/nginx/conf/conf.d:/etc/nginx/conf.d -v /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf  -v /data/nginx/logs:/var/log/nginx   nginx
+```
 
 命令说明：
 
@@ -100,6 +103,8 @@ docker run  -d -p 80:80 -p 443:443 --name nginx   -v /data/nginx/html:/usr/share
       -v /data/nginx/conf/default.conf:/etc/nginx/conf.d/default.conf：将我们自己创建的 default.conf 挂载到容器的 /etc/nginx/conf.d/default.conf
 
       -v /data/nginx/logs:/var/log/nginx：将我们自己创建的 logs 挂载到容器的 /var/log/nginx。
+      -v /etc/timezone:/etc/timezone     时区映射
+      -v /etc/localtime:/etc/localtime   本地时间映射
 
 
 

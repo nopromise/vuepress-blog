@@ -13,7 +13,8 @@ module.exports = [
 		collapsable: false,
 		children: [
 			'/container/jenkins/jenkins-inst',
-			'/container/jenkins/jenkins-apply',
+			'/container/jenkins/jenkins-apply-springboot',
+			'/container/jenkins/jenkins-apply-nodejs',
 		]
 	},
 	{

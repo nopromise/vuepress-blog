@@ -2,30 +2,20 @@
     /* 自定义的样式 */
 }
 
-// markdown blockquote
-// blockquote
-//   font-size 1rem
-//   color #2c3e50;
-//   border-left .5rem solid #42b983
-//   background-color #f3f5f7
-//   margin 1rem 0
-//   padding 1rem 0 1rem 1rem
 
-//   & > p
-//     margin 0
-
-// markdown h2
-
-// h2
-//   font-size 1.65rem
-//   padding-bottom 1rem
-//   border-bottom 1px solid $borderColor
-
+html, body {
+    padding: 0;
+    margin: 0;
+    // background-color: #fff;
+    background-image: url(/img/bz1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 .sidebar {
     font-size: 16px;
-    background-color: #fff;
-    width: 13rem;
+    background-color: rgba(128,138,135,0.2);
+    width: 20rem;
     position: fixed;
     z-index: 10;
     margin: 0;
@@ -37,6 +27,19 @@
     overflow-y: auto;
 }
 
+.theme-default-content:not(.custom) {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    background-color: white;
+    box-shadow: 0 0 10px green;
+}
 .page {
-    padding-left: 13rem;
+    padding-left: 11rem;
+}
+
+.navbar {
+    padding: 0.7rem 1.5rem;
+    line-height: 2.2rem;
+    box-shadow: 0 0 20px grey;
 }
