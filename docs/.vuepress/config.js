@@ -1,6 +1,9 @@
 module.exports = {
     title: 'NOPR BLOG',
-    description: 'RECORD AND SHARE',
+    description: '_',
+
+    // title: '',
+    // description: '',
 
     //build后生成的目录   ./ 是package.json所在的当前目录；默认在.vuepress目录下 
     // dest: './dist',

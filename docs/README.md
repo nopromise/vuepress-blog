@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/alita.jpg
+heroImage: /img/center/2.gif
 
 # bgImage: '/img/bg2.png'
 # bgImageStyle: { height: '700px' }
